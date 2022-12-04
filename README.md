@@ -12,6 +12,20 @@
 
 ## 1. Написать service, который будет раз в 30 секунд мониторить лог на предмет наличия ключевого слова (файл лога и ключевое слово должны задаваться в /etc/sysconfig).
 
+```bash
+[root@systemd ~]# tail -f /var/log/messages
+Dec  4 21:39:04 tw4-VB systemd: Started My watchlog service.
+Dec  4 21:39:32 tw4-VB systemd: Starting My watchlog service...
+Dec  4 21:39:34 tw4-VB root: Sun Dec  4 21:39:33 UTC 2022: I found word, Master!
+Dec  4 21:39:34 tw4-VB systemd: Started My watchlog service.
+Dec  4 21:40:02 tw4-VB systemd: Starting My watchlog service...
+Dec  4 21:40:04 tw4-VB root: Sun Dec  4 21:40:03 UTC 2022: I found word, Master!
+Dec  4 21:40:05 tw4-VB systemd: Started My watchlog service.
+Dec  4 21:40:33 tw4-VB systemd: Starting My watchlog service...
+Dec  4 21:40:35 tw4-VB root: Sun Dec  4 21:40:34 UTC 2022: I found word, Master!
+Dec  4 21:40:35 tw4-VB systemd: Started My watchlog service.
+
+```
 
 
 ## 2. Из репозитория epel установить spawn-fcgi и переписать init-скрипт на unit-файл (имя service должно называться так же: spawn-fcgi).
