@@ -34,9 +34,7 @@
 
 ```bash
 [root@systemd ~]# ss -tnulp | grep httpd
-
 tcp    LISTEN     0      128    [::]:8080               [::]:*                   users:(("httpd",pid=4082,fd=4),("httpd",pid=4081,fd=4),("httpd",pid=4080,fd=4),("httpd",pid=4079,fd=4),("httpd",pid=4078,fd=4),("httpd",pid=4077,fd=4),("httpd",pid=4075,fd=4))
-
 tcp    LISTEN     0      128    [::]:80                 [::]:*                   users:(("httpd",pid=4062,fd=4),("httpd",pid=4061,fd=4),("httpd",pid=4060,fd=4),("httpd",pid=4059,fd=4),("httpd",pid=4058,fd=4),("httpd",pid=4056,fd=4),("httpd",pid=4054,fd=4))
 
 ```
