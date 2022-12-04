@@ -18,5 +18,6 @@ Vagrant.configure(2) do |config|
   config.vm.provision "file", source: "files", destination: "/home/vagrant/"
   config.vm.provision "watchlog", type: "shell", path: "watchlog-monitor.sh"
   config.vm.provision "spawn-fcgi", type: "shell", path: "spawn-fcgi.sh"
+  config.vm.provision "httpd", type: "shell", path: "httpd.sh"
 end
 
